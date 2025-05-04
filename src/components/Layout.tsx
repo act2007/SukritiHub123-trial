@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Navbar } from './Navbar';
 import { SidebarProvider, Sidebar, SidebarContent, SidebarFooter, SidebarTrigger, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarMenuSub, SidebarMenuSubItem, SidebarMenuSubButton } from "@/components/ui/sidebar";
@@ -35,8 +34,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       path: "/bookkeeping",
       subItems: [
         { title: "Accounts", icon: FileText, path: "/bookkeeping/accounts" },
-        { title: "Bye-Laws", icon: List, path: "/bookkeeping/bye-laws" },
-        { title: "GBM Minutes", icon: Clock, path: "/bookkeeping/gbm-minutes" },
         { title: "Payments", icon: DollarSign, path: "/bookkeeping/payments" },
       ]
     },

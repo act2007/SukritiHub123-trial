@@ -15,8 +15,6 @@ import Visitors from "./pages/Visitors";
 import Guards from "./pages/Guards";
 import Vendors from "./pages/Vendors";
 import BookkeepingAccounts from "./pages/BookkeepingAccounts";
-import BookkeepingByelaws from "./pages/BookkeepingByelaws";
-import BookkeepingMinutes from "./pages/BookkeepingMinutes";
 import BookkeepingPayments from "./pages/BookkeepingPayments";
 import FinanceChat from "./pages/FinanceChat";
 import WhatsAppIntegration from "./pages/WhatsAppIntegration";
@@ -99,22 +97,6 @@ const App = () => {
               </ProtectedRoute>
             } />
             
-            <Route path="/bookkeeping/bye-laws" element={
-              <ProtectedRoute 
-                requiredRoles={['Super Admin', 'Admin']}
-              >
-                <BookkeepingByelaws />
-              </ProtectedRoute>
-            } />
-            
-            <Route path="/bookkeeping/gbm-minutes" element={
-              <ProtectedRoute 
-                requiredRoles={['Super Admin', 'Admin']}
-              >
-                <BookkeepingMinutes />
-              </ProtectedRoute>
-            } />
-            
             <Route path="/bookkeeping/payments" element={
               <ProtectedRoute 
                 requiredRoles={['Super Admin', 'Admin']}
@@ -141,10 +123,7 @@ const App = () => {
             
             <Route path="/domestic-help" element={
               <ProtectedRoute 
-                requiredPermissions={[
-                  'approve_manage_service_staff',
-                  'enter_record_service_staff'
-                ]}
+                requiredRoles={['Super Admin', 'Admin']}
               >
                 <DomesticHelp />
               </ProtectedRoute>
